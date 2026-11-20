@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Begood Music Player: player de música offline para Android, grátis e sem anúncios | Begood Music</title>
+<meta name="description" content="Player gratuito e sem anúncios para as músicas guardadas no celular: letras sincronizadas, equalizador paramétrico que funciona no Bluetooth, editor de tags com capas, playlists Genius e Android Auto.">
+<meta name="author" content="Roberto Santos da Silva">
+<meta name="theme-color" content="#14161c">
+<link rel="canonical" href="https://begoodmusic.vercel.app/music-player/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Begood Music">
+<meta property="og:title" content="Begood Music Player: player de música offline para Android, grátis e sem anúncios | Begood Music">
+<meta property="og:description" content="Player gratuito e sem anúncios para as músicas guardadas no celular: letras sincronizadas, equalizador paramétrico que funciona no Bluetooth, editor de tags com capas, playlists Genius e Android Auto.">
+<meta property="og:url" content="https://begoodmusic.vercel.app/music-player/">
+<meta property="og:image" content="https://begoodmusic.vercel.app/assets/img/bmp-icone.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/bmp-icone.png">
+<link rel="preload" href="../assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Begood Music Player","url":"https://begoodmusic.vercel.app/music-player/","description":"Player gratuito e sem anúncios para as músicas guardadas no celular: letras sincronizadas, equalizador paramétrico que funciona no Bluetooth, editor de tags com capas, playlists Genius e Android Auto.","operatingSystem":"Android 8.0 ou superior","applicationCategory":"MultimediaApplication","image":"https://begoodmusic.vercel.app/assets/img/bmp-icone.png","downloadUrl":"https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android/releases/latest","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"author":{"@type":"Person","name":"Roberto Santos da Silva"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O Begood Music Player toca música sem internet?","acceptedAnswer":{"@type":"Answer","text":"Sim. Ele toca as músicas que já estão no celular, sem internet. A internet só é usada, se você quiser, para buscar letras, capas e dados de álbuns."}},{"@type":"Question","name":"Funciona com Spotify, YouTube Music ou Deezer?","acceptedAnswer":{"@type":"Answer","text":"Não. O B.M.P é para os seus arquivos de música (MP3, FLAC, M4A, OGG...) guardados no celular ou no cartão de memória."}},{"@type":"Question","name":"O equalizador funciona no fone Bluetooth e no carro?","acceptedAnswer":{"@type":"Answer","text":"Funciona. A equalização é feita dentro do app, então vale para alto-falante, fone com fio, fone Bluetooth e som do carro."}},{"@type":"Question","name":"Como colocar a letra nas músicas?","acceptedAnswer":{"@type":"Answer","text":"Abra a letra em Tocando agora. O app procura nas tags, em arquivos .lrc e no LRCLIB. Depois toque em Gravar na música para ela ficar salva no próprio arquivo."}}]}</script>
+</head>
+<body class="app-bmp">
+<a class="visually-hidden" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="../"><svg class="marca-sinal" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="17" height="17" stroke="currentColor"/><path d="M7 14v-3M10 15V7M13 13V9M16 14v-2" stroke="#E0A030" stroke-width="1.6" stroke-linecap="square"/></svg><span class="hud"><b>Begood</b> Music</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../#apps">Apps</a>
+      <a href="../#instalar">Instalar</a>
+      <a class="nav-extra" href="../#cafezinho">Cafezinho</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<section class="hero">
+  <canvas class="campo" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <a class="voltar hud" href="../"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Todos os apps</a>
+    <div class="app-hero">
+      <div>
+        <img class="app-icone app-icone-lg" src="../assets/img/bmp-icone.svg" width="96" height="96" alt="Ícone do Begood Music Player">
+        <p class="hud"><span class="dot"></span>Begood Music Player · Player de música</p>
+        <h1 class="display display-lg" style="font-size:clamp(40px,7.5vw,80px)">Suas músicas, do jeito <em>certo</em>.</h1>
+        <p class="lead">Player gratuito e sem anúncios para as músicas guardadas no celular: letras sincronizadas, equalizador paramétrico que funciona no Bluetooth, editor de tags com capas, playlists Genius e Android Auto.</p>
+      </div>
+      <div class="baixar marcas" id="baixar"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <div class="baixar-linha"><span class="hud">Versão</span><span data-repo="robertobegood-jpg/Begood-Music-Player-app-Android" data-campo="versao">···</span></div>
+        <div class="baixar-linha"><span class="hud">Publicada</span><span data-repo="robertobegood-jpg/Begood-Music-Player-app-Android" data-campo="data">···</span></div>
+        <div class="baixar-linha"><span class="hud">Tamanho</span><span data-repo="robertobegood-jpg/Begood-Music-Player-app-Android" data-campo="tamanho">···</span></div>
+        <div class="baixar-linha"><span class="hud">Licença</span><span>GPL-3.0</span></div>
+        <a class="btn btn-solido btn-largo" href="https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android/releases/latest" data-repo="robertobegood-jpg/Begood-Music-Player-app-Android" data-campo="baixar" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1.5v9M4 7l4 4 4-4M2 14.5h12"/></svg><span data-rotulo>Baixar APK</span></a>
+        <a class="btn btn-largo" href="obtainium://add/https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android">Adicionar ao Obtainium</a>
+        <p class="hud aviso-req">Android 8.0 ou superior · Grátis</p>
+        <div class="baixar-qr">
+          <img src="../assets/img/qr-bmp.svg" width="96" height="96" alt="QR Code para baixar o Begood Music Player" loading="lazy">
+          <p>Está no computador? Aponte a câmera do celular para baixar direto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">02/Funções</div>
+    <div class="funcoes-com-maquete">
+      <div class="funcoes">
+        <div class="funcao revela"><span class="hud">01</span><h3 class="heading">Biblioteca</h3><ul><li>Você escolhe as <strong>pastas</strong> que entram; sem escolher, usa a pasta Music do celular e do cartão SD.</li><li>Abas de Álbuns, Artistas, Músicas, Gêneros, Playlists e Buscar.</li><li>Artistas separados por <strong>artista do álbum</strong> e <strong>artista da faixa</strong>: participações (feat.) aparecem nos dois.</li><li>MP3, FLAC, M4A, OGG, WAV e outros formatos.</li></ul></div>
+        <div class="funcao revela"><span class="hud">02</span><h3 class="heading">Letras</h3><ul><li>Procura nas tags, em arquivo <strong>.lrc</strong> ou .txt com o mesmo nome e no <strong>LRCLIB</strong>, com letra sincronizada.</li><li>Também dá para pesquisar no Google, colar a letra e <strong>gravar na música</strong>.</li><li>Gravar as letras de toda a biblioteca de uma vez.</li></ul></div>
+        <div class="funcao revela"><span class="hud">03</span><h3 class="heading">Editor de tags</h3><ul><li>Uma música, o álbum inteiro ou várias de uma vez.</li><li>Artista, álbum, ano, gênero, número da faixa, letra e <strong>capa</strong>.</li><li><strong>Atualizar pela internet</strong>: dados e capa em alta resolução do iTunes e do Deezer.</li></ul></div>
+        <div class="funcao revela"><span class="hud">04</span><h3 class="heading">Playlists</h3><ul><li>Playlists suas e automáticas: <strong>Favoritas</strong>, Mais tocadas, Recentes e Adicionadas.</li><li>Importar e exportar <strong>.m3u</strong>, inclusive playlists feitas no PC.</li><li><strong>Genius</strong>: escolha uma música e o app monta uma playlist que combina com ela, como no iPod, e funciona sem internet.</li></ul></div>
+        <div class="funcao revela"><span class="hud">05</span><h3 class="heading">Modo estudo</h3><ul><li><strong>Velocidade</strong> sem mudar o tom e <strong>tom</strong> acima ou abaixo.</li><li><strong>Repetir trecho A/B</strong> para tirar uma parte da música.</li></ul></div>
+        <div class="funcao revela"><span class="hud">06</span><h3 class="heading">Bluetooth e carro</h3><ul><li>Controles do fone e do carro, título e capa no visor.</li><li>Navegue por álbuns, artistas e playlists no <strong>Android Auto</strong>.</li><li>O play do carro <strong>retoma a última fila</strong> mesmo com o app fechado.</li></ul></div>
+      </div>
+      <div class="revela maquete-lado"><div class="maquete marcas maquete-letra" aria-hidden="true"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <p class="hud ao-vivo" style="margin:0">Tocando agora</p>
+        <div class="capa-falsa"><span></span></div>
+        <p class="faixa-nome">Estrada de Luz</p>
+        <p class="hud" style="margin:0">Banda Exemplo · Demonstração</p>
+        <div class="letra"><div data-letra>
+          <p>Liga o som e deixa a noite andar</p>
+          <p>Cada nota acende um lugar</p>
+          <p>O refrão chegou, pode cantar</p>
+          <p>Sua coleção, do jeito que é</p>
+          <p>Volume no talo, batida no pé</p>
+          <p>Toca de novo, se a gente quiser</p>
+        </div></div>
+        <div class="barra-tempo"><i data-tempo></i></div>
+        <div class="eq-mini"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">01/Destaque</div>
+    <div class="destaque">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Equalizador <em>paramétrico</em> que vale no Bluetooth.</h2>
+        <p class="lead" style="margin-bottom:1em">A maioria dos players usa o equalizador do próprio celular, que muitas vezes não funciona no fone Bluetooth nem no carro. O B.M.P faz a equalização dentro do app, então ela vale em <strong>qualquer saída</strong>.</p>
+        <p class="lead" style="margin-bottom:1em">São até <strong>10 bandas</strong> com frequência, ganho e largura livres, filtros de pico, graves e agudos, pré-amplificação automática para não distorcer e presets prontos ou criados por você.</p>
+      </div>
+      <figure class="destaque-print revela"><img src="../assets/img/bmp-equalizador.jpg" width="540" height="1200" alt="Tela do equalizador paramétrico do Begood Music Player com o preset Rock" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+<section class="secao" id="instalar">
+  <div class="wrap">
+    <div class="rotulo hud revela">03/Como instalar</div>
+    <ol class="passos">
+    <li class="revela"><strong>Baixe o APK</strong><p>Pelo celular, toque em “Baixar APK” nesta página.</p></li>
+    <li class="revela"><strong>Permita a instalação</strong><p>Abra o arquivo e permita “instalar apps desconhecidos” quando o Android pedir.</p></li>
+    <li class="revela"><strong>Permita o acesso</strong><p>Ao abrir o app, toque em Permitir para ele ler suas músicas e mostrar os controles.</p></li>
+    <li class="revela"><strong>Escolha as pastas</strong><p>Em Configurações, adicione as pastas das suas músicas ou deixe a pasta Music.</p></li>
+  </ol>
+    <details class="marcas-cel revela">
+      <summary>Onde fica “instalar apps desconhecidos” em cada marca</summary>
+      <ul class="lista-simples">
+        <li><strong>Samsung:</strong> Configurações › Aplicativos › menu ⋮ › Acesso especial › Instalar aplicativos desconhecidos.</li>
+        <li><strong>Xiaomi, Redmi e Poco:</strong> Configurações › Privacidade (ou Proteção) › Fontes desconhecidas.</li>
+        <li><strong>Motorola e Android puro:</strong> Configurações › Apps › Acesso especial a apps › Instalar apps desconhecidos.</li>
+        <li>Escolha o app usado para abrir o APK (Chrome ou Arquivos) e ative <strong>Permitir desta fonte</strong>. Depois de instalar, pode desativar de novo.</li>
+        <li>Se o <strong>Play Protect</strong> avisar que o app é desconhecido, toque em <strong>Mais detalhes › Instalar mesmo assim</strong>. O aviso aparece para qualquer app de fora da loja.</li>
+      </ul>
+    </details>
+    <p class="muted revela" style="margin-top:24px;max-width:46em"><strong style="color:var(--ink);font-weight:500">Atualizações:</strong> Baixe o APK da versão nova e instale por cima. As playlists, favoritas e ajustes continuam.<br><strong style="color:var(--ink);font-weight:500">Dica:</strong> Se a música parar com a tela apagada: Configurações do Android › Apps › B.M.P › Bateria → Sem restrições.</p>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">04/Novidades</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">O que mudou na <em>última</em> versão.</h2>
+        <a class="btn" href="https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android/releases" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>Todas as versões</a>
+      </div>
+      <div class="notas revela" data-repo="robertobegood-jpg/Begood-Music-Player-app-Android" data-campo="notas" aria-live="polite">
+        <div class="esqueleto" style="width:40%"></div><div class="esqueleto"></div><div class="esqueleto" style="width:85%"></div><div class="esqueleto" style="width:70%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">05/Perguntas frequentes</div>
+    <div class="faq">
+      <details class="revela"><summary>O Begood Music Player toca música sem internet?</summary><p>Sim. Ele toca as músicas que já estão no celular, sem internet. A internet só é usada, se você quiser, para buscar letras, capas e dados de álbuns.</p></details>
+      <details class="revela"><summary>Funciona com Spotify, YouTube Music ou Deezer?</summary><p>Não. O B.M.P é para os seus arquivos de música (MP3, FLAC, M4A, OGG...) guardados no celular ou no cartão de memória.</p></details>
+      <details class="revela"><summary>O equalizador funciona no fone Bluetooth e no carro?</summary><p>Funciona. A equalização é feita dentro do app, então vale para alto-falante, fone com fio, fone Bluetooth e som do carro.</p></details>
+      <details class="revela"><summary>Como colocar a letra nas músicas?</summary><p>Abra a letra em Tocando agora. O app procura nas tags, em arquivos .lrc e no LRCLIB. Depois toque em Gravar na música para ela ficar salva no próprio arquivo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="privacidade">
+  <div class="wrap">
+    <div class="rotulo hud revela">06/Privacidade</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Política de <em>privacidade</em>.</h2>
+        <ul class="lista-simples">
+          <li><strong>Sem cadastro, sem anúncios e sem servidor próprio.</strong> Músicas, playlists e estatísticas ficam só no seu celular.</li>
+          <li>A internet é usada só para buscar letras (LRCLIB), dados e capas de álbuns (iTunes e Deezer) e músicas parecidas (Last.fm), com o nome do artista, do álbum ou da música.</li>
+          <li>Nenhum arquivo de música é enviado para lugar nenhum.</li>
+          <li>A chave opcional da Last.fm fica guardada no próprio celular.</li>
+        </ul>
+      </div>
+      <div class="revela">
+        <table class="tabela">
+          <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
+          <tbody>
+            <tr><td>Músicas e áudio</td><td>Ler as músicas do celular e gravar tags e letras quando você pedir</td></tr>
+            <tr><td>Notificações</td><td>Mostrar a música tocando, com os controles</td></tr>
+            <tr><td>Internet</td><td>Letras, capas, dados de álbuns e Genius</td></tr>
+            <tr><td>Tocar em segundo plano</td><td>Continuar tocando com a tela apagada e no carro</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="font-size:14px;margin-top:20px">Código aberto: dá para conferir tudo isso no <a href="https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android" rel="noopener">repositório no GitHub</a>. Dúvidas ou problemas: <a href="https://github.com/robertobegood-jpg/Begood-Music-Player-app-Android/issues" rel="noopener">abra uma issue</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="cafezinho">
+  <div class="wrap">
+    <div class="rotulo hud revela">07/Cafezinho</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Ajudou no seu <em>som</em>?</h2>
+        <p class="lead">Os apps são gratuitos e vão continuar assim. Se algum faz parte do seu dia, dá para apoiar com um Pix de qualquer valor.</p>
+      </div>
+      <div class="marcas pix revela"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <img class="pix-qr" src="../assets/img/qr-pix.svg" width="168" height="168" alt="QR Code do Pix">
+        <div>
+          <p class="hud">Chave Pix · e-mail</p>
+          <p style="margin:6px 0 0;font-weight:500;word-break:break-all">robertobegood+itau@gmail.com</p>
+          <p class="muted" style="margin:0;font-size:14px">Roberto Santos da Silva</p>
+          <code class="pix-codigo" id="pix">00020126630014br.gov.bcb.pix0128robertobegood+itau@gmail.com0209Cafezinho5204000053039865802BR5923Roberto Santos da Silva6009Sao Paulo62070503***63047463</code>
+          <button class="btn btn-solido btn-largo" type="button" data-copiar="#pix"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="5" width="9" height="9"/><path d="M11 5V2H2v9h3"/></svg>Copiar Pix copia e cola</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script>
+(function(){var L=document.querySelectorAll('[data-letra] p'),T=document.querySelector('[data-tempo]'),i=0;
+function m(){L.forEach(function(p,k){p.className=k===i?'atual':(k<i?'passou':'')});var c=document.querySelector('[data-letra]');c.style.transform='translateY('+(-Math.max(0,i-1)*2.1)+'em)';T.style.width=((i+1)/L.length*100)+'%';}
+m();if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;setInterval(function(){i=(i+1)%L.length;m();},2400);})();
+</script>
+<footer class="rodape">
+  <div class="wrap">
+    <div>
+      <p class="hud"><b>Roberto Santos da Silva</b></p>
+      <p class="muted" style="margin:6px 0 0;font-size:14px">Apps de música gratuitos, sem anúncios e de código aberto (GPL-3.0).</p>
+    </div>
+    <div class="rodape-links hud">
+      <a href="../music-player/">Begood Music Player</a>
+      <a href="../studio/">Begood Studio</a>
+      <a href="https://github.com/robertobegood-jpg" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/campo.js" defer></script>
+</body>
+</html>

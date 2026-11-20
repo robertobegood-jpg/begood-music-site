@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Begood Studio: afinador, metrônomo e player para estudar música, grátis para Android | Begood Music</title>
+<meta name="description" content="Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Grátis, sem anúncios e sem internet.">
+<meta name="author" content="Roberto Santos da Silva">
+<meta name="theme-color" content="#14161c">
+<link rel="canonical" href="https://begoodmusic.vercel.app/studio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Begood Music">
+<meta property="og:title" content="Begood Studio: afinador, metrônomo e player para estudar música, grátis para Android | Begood Music">
+<meta property="og:description" content="Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Grátis, sem anúncios e sem internet.">
+<meta property="og:url" content="https://begoodmusic.vercel.app/studio/">
+<meta property="og:image" content="https://begoodmusic.vercel.app/assets/img/studio-icone.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/bmp-icone.png">
+<link rel="preload" href="../assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Begood Studio","url":"https://begoodmusic.vercel.app/studio/","description":"Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Grátis, sem anúncios e sem internet.","operatingSystem":"Android 8.0 ou superior","applicationCategory":"MultimediaApplication","image":"https://begoodmusic.vercel.app/assets/img/studio-icone.png","downloadUrl":"https://github.com/robertobegood-jpg/Begood-Studio-app-Android/releases/latest","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"author":{"@type":"Person","name":"Roberto Santos da Silva"},"screenshot":["https://begoodmusic.vercel.app/assets/img/studio-afinador.jpg","https://begoodmusic.vercel.app/assets/img/studio-metronomo.jpg","https://begoodmusic.vercel.app/assets/img/studio-player.jpg"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O afinador do Begood Studio serve para violão, guitarra e baixo?","acceptedAnswer":{"@type":"Answer","text":"Serve. Tem afinações prontas para violão, guitarra (6 e 7 cordas), baixo de 4 e 5 cordas, cavaquinho, ukulele, violino, bandolim, viola e violoncelo, além do modo cromático para qualquer instrumento."}},{"@type":"Question","name":"Dá para deixar a música mais lenta sem mudar o tom?","acceptedAnswer":{"@type":"Answer","text":"Dá. O player muda a velocidade de 25% a 200% mantendo o tom, e também muda o tom sem mexer na velocidade."}},{"@type":"Question","name":"Como repetir só um trecho da música?","acceptedAnswer":{"@type":"Answer","text":"No Player, marque o ponto A e o ponto B (ou arraste o dedo na forma de onda) e ligue Repetir. Dá para acelerar um pouco a cada volta."}},{"@type":"Question","name":"Precisa de internet?","acceptedAnswer":{"@type":"Answer","text":"Não. O Begood Studio não tem permissão de internet: tudo funciona no celular, inclusive no ensaio sem sinal."}}]}</script>
+</head>
+<body class="app-studio">
+<a class="visually-hidden" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="../"><svg class="marca-sinal" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="17" height="17" stroke="currentColor"/><path d="M7 14v-3M10 15V7M13 13V9M16 14v-2" stroke="#E0A030" stroke-width="1.6" stroke-linecap="square"/></svg><span class="hud"><b>Begood</b> Music</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../#apps">Apps</a>
+      <a href="../#instalar">Instalar</a>
+      <a class="nav-extra" href="../#cafezinho">Cafezinho</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<section class="hero">
+  <canvas class="campo" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <a class="voltar hud" href="../"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Todos os apps</a>
+    <div class="app-hero">
+      <div>
+        <img class="app-icone app-icone-lg" src="../assets/img/studio-icone.svg" width="96" height="96" alt="Ícone do Begood Studio">
+        <p class="hud"><span class="dot"></span>Begood Studio · Afinador, metrônomo e estudo</p>
+        <h1 class="display display-lg" style="font-size:clamp(40px,7.5vw,80px)">Afine, marque o tempo e <em>tire</em> o solo.</h1>
+        <p class="lead">Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Grátis, sem anúncios e sem internet.</p>
+      </div>
+      <div class="baixar marcas" id="baixar"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <div class="baixar-linha"><span class="hud">Versão</span><span data-repo="robertobegood-jpg/Begood-Studio-app-Android" data-campo="versao">···</span></div>
+        <div class="baixar-linha"><span class="hud">Publicada</span><span data-repo="robertobegood-jpg/Begood-Studio-app-Android" data-campo="data">···</span></div>
+        <div class="baixar-linha"><span class="hud">Tamanho</span><span data-repo="robertobegood-jpg/Begood-Studio-app-Android" data-campo="tamanho">···</span></div>
+        <div class="baixar-linha"><span class="hud">Licença</span><span>GPL-3.0</span></div>
+        <a class="btn btn-solido btn-largo" href="https://github.com/robertobegood-jpg/Begood-Studio-app-Android/releases/latest" data-repo="robertobegood-jpg/Begood-Studio-app-Android" data-campo="baixar" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1.5v9M4 7l4 4 4-4M2 14.5h12"/></svg><span data-rotulo>Baixar APK</span></a>
+        <a class="btn btn-largo" href="obtainium://add/https://github.com/robertobegood-jpg/Begood-Studio-app-Android">Adicionar ao Obtainium</a>
+        <p class="hud aviso-req">Android 8.0 ou superior · Grátis</p>
+        <div class="baixar-qr">
+          <img src="../assets/img/qr-studio.svg" width="96" height="96" alt="QR Code para baixar o Begood Studio" loading="lazy">
+          <p>Está no computador? Aponte a câmera do celular para baixar direto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">01/Telas</div>
+    <div class="galeria" tabindex="0" aria-label="Telas do Begood Studio">
+      <figure><img src="../assets/img/studio-afinador.jpg" width="540" height="1200" alt="Afinador do Begood Studio com ponteiro, cordas do violão e Lá 440 Hz" loading="eager"><figcaption class="hud">01/Afinador</figcaption></figure>
+      <figure><img src="../assets/img/studio-metronomo.jpg" width="540" height="1200" alt="Metrônomo do Begood Studio em 100 BPM, compasso 4/4" loading="eager"><figcaption class="hud">02/Metrônomo</figcaption></figure>
+      <figure><img src="../assets/img/studio-player.jpg" width="540" height="1200" alt="Player de estudo com forma de onda e repetição de trecho A/B" loading="lazy"><figcaption class="hud">03/Player</figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">02/Funções</div>
+    <div class="funcoes-com-maquete">
+      <div class="funcoes">
+        <div class="funcao revela"><span class="hud">01</span><h3 class="heading">Afinador</h3><ul><li>Mostra a nota, quantos <strong>cents</strong> está acima ou abaixo e a frequência.</li><li><strong>Ponteiro</strong> ou <strong>estrobo</strong>, como os afinadores de bancada.</li><li>Precisão medida nos testes: cerca de <strong>0,01 cent</strong> em som limpo.</li><li>Toque numa corda para <strong>fixá-la</strong> quando ela estiver muito desafinada.</li></ul></div>
+        <div class="funcao revela"><span class="hud">02</span><h3 class="heading">Afinações</h3><ul><li>Violão e guitarra: padrão, meio tom e um tom abaixo, Drop D, Open G, Open D e DADGAD.</li><li>Guitarra de 7 cordas, <strong>baixo</strong> de 4 e 5 cordas, <strong>cavaquinho</strong>, ukulele.</li><li>Violino, bandolim, viola de arco, violoncelo ou modo cromático.</li><li>Lá de referência de 415 a 466 Hz (atalhos 432, 440 e 442).</li></ul></div>
+        <div class="funcao revela"><span class="hud">03</span><h3 class="heading">Metrônomo</h3><ul><li>20 a 300 BPM, ajuste fino, barra ou <strong>toque no ritmo</strong>.</li><li>Compassos de 2/4 a 12/8; colcheias, tercinas e semicolcheias.</li><li><strong>Treino de velocidade</strong>: sobe o BPM sozinho a cada tantos compassos.</li><li><strong>Compassos mudos</strong> para treinar o tempo interno.</li></ul></div>
+        <div class="funcao revela"><span class="hud">04</span><h3 class="heading">Player de estudo</h3><ul><li>Velocidade de <strong>25% a 200% sem mudar o tom</strong>.</li><li><strong>Tom</strong> ±12 semitons com ajuste fino em cents.</li><li>Abre MP3, M4A, FLAC, WAV e OGG do celular.</li></ul></div>
+        <div class="funcao revela"><span class="hud">05</span><h3 class="heading">Repetir trecho A/B</h3><ul><li>Marque A e B no ponto atual ou <strong>arrastando o dedo na forma de onda</strong>.</li><li>Pausa com contagem antes de repetir e contador de voltas.</li><li><strong>Acelerar a cada volta</strong>: comece em 60% e chegue a 100%.</li><li>Trechos salvos por música (“Solo 1”, “Riff do refrão”).</li></ul></div>
+        <div class="funcao revela"><span class="hud">06</span><h3 class="heading">Feito para estudar</h3><ul><li>A tela fica acesa enquanto o app está aberto.</li><li>O metrônomo continua tocando junto com o player.</li><li>Sem anúncios interrompendo o estudo.</li></ul></div>
+      </div>
+      <div class="revela maquete-lado"><div class="maquete marcas maquete-afinador" aria-hidden="true"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <p class="hud" style="margin:0">Violão · Padrão (E A D G B E)</p>
+        <div class="nota" data-af="nota">A<small>2</small></div>
+        <p class="cents" data-af="cents">+12 cents</p>
+        <svg class="mostrador" viewBox="0 0 200 110">
+          <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2"/>
+          <path d="M92 21 A80 80 0 0 1 108 21" fill="none" stroke="#4CD07D" stroke-width="6"/>
+          <g data-af="ponteiro" style="transform-origin:100px 100px;transform:rotate(22deg)"><line x1="100" y1="100" x2="100" y2="28" stroke="#E0A030" stroke-width="3" stroke-linecap="round"/></g>
+          <circle cx="100" cy="100" r="6" fill="#E0A030"/>
+        </svg>
+        <div class="maquete-grade">
+          <div><span class="hud">Frequência</span><b data-af="hz">110,76 Hz</b></div>
+          <div><span class="hud">Lá</span><b>440 Hz</b></div>
+        </div>
+        <div class="cordas" data-af="cordas"><i>E2</i><i class="on">A2</i><i>D3</i><i>G3</i><i>B3</i><i>E4</i></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="instalar">
+  <div class="wrap">
+    <div class="rotulo hud revela">03/Como instalar</div>
+    <ol class="passos">
+    <li class="revela"><strong>Baixe o APK</strong><p>Pelo celular, toque em “Baixar APK” nesta página.</p></li>
+    <li class="revela"><strong>Permita a instalação</strong><p>Abra o arquivo e permita “instalar apps desconhecidos” quando o Android pedir.</p></li>
+    <li class="revela"><strong>Permita o microfone</strong><p>No afinador, toque em Permitir para o app ouvir o instrumento.</p></li>
+    <li class="revela"><strong>Escolha a afinação</strong><p>No alto do afinador, escolha o instrumento e a afinação. Pronto para tocar.</p></li>
+  </ol>
+    <details class="marcas-cel revela">
+      <summary>Onde fica “instalar apps desconhecidos” em cada marca</summary>
+      <ul class="lista-simples">
+        <li><strong>Samsung:</strong> Configurações › Aplicativos › menu ⋮ › Acesso especial › Instalar aplicativos desconhecidos.</li>
+        <li><strong>Xiaomi, Redmi e Poco:</strong> Configurações › Privacidade (ou Proteção) › Fontes desconhecidas.</li>
+        <li><strong>Motorola e Android puro:</strong> Configurações › Apps › Acesso especial a apps › Instalar apps desconhecidos.</li>
+        <li>Escolha o app usado para abrir o APK (Chrome ou Arquivos) e ative <strong>Permitir desta fonte</strong>. Depois de instalar, pode desativar de novo.</li>
+        <li>Se o <strong>Play Protect</strong> avisar que o app é desconhecido, toque em <strong>Mais detalhes › Instalar mesmo assim</strong>. O aviso aparece para qualquer app de fora da loja.</li>
+      </ul>
+    </details>
+    <p class="muted revela" style="margin-top:24px;max-width:46em"><strong style="color:var(--ink);font-weight:500">Atualizações:</strong> Baixe o APK da versão nova e instale por cima. Os ajustes e os trechos salvos continuam.</p>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">04/Novidades</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">O que mudou na <em>última</em> versão.</h2>
+        <a class="btn" href="https://github.com/robertobegood-jpg/Begood-Studio-app-Android/releases" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>Todas as versões</a>
+      </div>
+      <div class="notas revela" data-repo="robertobegood-jpg/Begood-Studio-app-Android" data-campo="notas" aria-live="polite">
+        <div class="esqueleto" style="width:40%"></div><div class="esqueleto"></div><div class="esqueleto" style="width:85%"></div><div class="esqueleto" style="width:70%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">05/Perguntas frequentes</div>
+    <div class="faq">
+      <details class="revela"><summary>O afinador do Begood Studio serve para violão, guitarra e baixo?</summary><p>Serve. Tem afinações prontas para violão, guitarra (6 e 7 cordas), baixo de 4 e 5 cordas, cavaquinho, ukulele, violino, bandolim, viola e violoncelo, além do modo cromático para qualquer instrumento.</p></details>
+      <details class="revela"><summary>Dá para deixar a música mais lenta sem mudar o tom?</summary><p>Dá. O player muda a velocidade de 25% a 200% mantendo o tom, e também muda o tom sem mexer na velocidade.</p></details>
+      <details class="revela"><summary>Como repetir só um trecho da música?</summary><p>No Player, marque o ponto A e o ponto B (ou arraste o dedo na forma de onda) e ligue Repetir. Dá para acelerar um pouco a cada volta.</p></details>
+      <details class="revela"><summary>Precisa de internet?</summary><p>Não. O Begood Studio não tem permissão de internet: tudo funciona no celular, inclusive no ensaio sem sinal.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="privacidade">
+  <div class="wrap">
+    <div class="rotulo hud revela">06/Privacidade</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Política de <em>privacidade</em>.</h2>
+        <ul class="lista-simples">
+          <li><strong>Sem cadastro, sem anúncios e sem internet:</strong> o app não tem permissão de internet.</li>
+          <li>O som do microfone é analisado na hora, só para o afinador, e <strong>nunca é gravado</strong>.</li>
+          <li>As músicas abertas no player são lidas do próprio celular.</li>
+        </ul>
+      </div>
+      <div class="revela">
+        <table class="tabela">
+          <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
+          <tbody>
+            <tr><td>Microfone</td><td>Ouvir o instrumento no afinador</td></tr>
+            <tr><td>Vibração</td><td>Vibrar no tempo do metrônomo (opcional)</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="font-size:14px;margin-top:20px">Código aberto: dá para conferir tudo isso no <a href="https://github.com/robertobegood-jpg/Begood-Studio-app-Android" rel="noopener">repositório no GitHub</a>. Dúvidas ou problemas: <a href="https://github.com/robertobegood-jpg/Begood-Studio-app-Android/issues" rel="noopener">abra uma issue</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="cafezinho">
+  <div class="wrap">
+    <div class="rotulo hud revela">07/Cafezinho</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Ajudou no seu <em>som</em>?</h2>
+        <p class="lead">Os apps são gratuitos e vão continuar assim. Se algum faz parte do seu dia, dá para apoiar com um Pix de qualquer valor.</p>
+      </div>
+      <div class="marcas pix revela"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <img class="pix-qr" src="../assets/img/qr-pix.svg" width="168" height="168" alt="QR Code do Pix">
+        <div>
+          <p class="hud">Chave Pix · e-mail</p>
+          <p style="margin:6px 0 0;font-weight:500;word-break:break-all">robertobegood+itau@gmail.com</p>
+          <p class="muted" style="margin:0;font-size:14px">Roberto Santos da Silva</p>
+          <code class="pix-codigo" id="pix">00020126630014br.gov.bcb.pix0128robertobegood+itau@gmail.com0209Cafezinho5204000053039865802BR5923Roberto Santos da Silva6009Sao Paulo62070503***63047463</code>
+          <button class="btn btn-solido btn-largo" type="button" data-copiar="#pix"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="5" width="9" height="9"/><path d="M11 5V2H2v9h3"/></svg>Copiar Pix copia e cola</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script>
+(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var C=[['E',2,82.41],['A',2,110],['D',3,146.83],['G',3,196],['B',3,246.94],['E',4,329.63]],k=1,c=12,q=function(n){return document.querySelector('[data-af='+n+']')};
+var P=q('ponteiro'),N=q('nota'),S=q('cents'),H=q('hz'),K=q('cordas').children;
+setInterval(function(){c=c*0.82+(Math.random()-.5)*0.6;if(Math.abs(c)<0.4){k=(k+1)%C.length;c=(Math.random()<.5?-1:1)*(15+Math.random()*25);}
+var n=C[k];N.innerHTML=n[0]+'<small>'+n[1]+'</small>';S.textContent=(c>0?'+':'')+c.toFixed(1).replace('.',',')+' cents';S.className='cents'+(Math.abs(c)<2?' ok':'');
+H.textContent=(n[2]*Math.pow(2,c/1200)).toFixed(2).replace('.',',')+' Hz';P.style.transform='rotate('+(c*1.6)+'deg)';
+for(var j=0;j<K.length;j++)K[j].className=j===k?'on':'';},180);})();
+</script>
+<footer class="rodape">
+  <div class="wrap">
+    <div>
+      <p class="hud"><b>Roberto Santos da Silva</b></p>
+      <p class="muted" style="margin:6px 0 0;font-size:14px">Apps de música gratuitos, sem anúncios e de código aberto (GPL-3.0).</p>
+    </div>
+    <div class="rodape-links hud">
+      <a href="../music-player/">Begood Music Player</a>
+      <a href="../studio/">Begood Studio</a>
+      <a href="https://github.com/robertobegood-jpg" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/campo.js" defer></script>
+</body>
+</html>
