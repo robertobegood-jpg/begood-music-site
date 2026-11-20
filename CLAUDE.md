@@ -3,7 +3,7 @@
 Site no Vercel para apresentar e baixar os apps Android de música do Roberto fora da Play Store:
 Begood Music Player (`D:\Projetos iA\Begood Music`) e Begood Studio (`D:\Projetos iA\Apps Android\Begood-Studio-app-Android`),
 e outros do gênero que vierem. Objetivo principal: ser encontrado no Google. Detalhes: `README.md`.
-Repositório: ainda não criado no GitHub. Endereço previsto: begoodmusic.vercel.app (`SITE_URL` em `scripts/gerar.mjs`).
+Repositório: github.com/robertobegood-jpg/begood-music-site (público). Endereço previsto: begoodmusic.vercel.app (`SITE_URL` em `scripts/gerar.mjs`).
 
 ## Como trabalhar comigo
 - Responda e escreva tudo em **português do Brasil**, linguagem simples.
