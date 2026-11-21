@@ -1,7 +1,7 @@
 # Begood Music — site dos apps de música
 
 Site de apresentação e download dos apps Android de música do Roberto, fora da Play Store:
-**Begood Music Player** (player offline com letras e equalizador) e **Begood Studio** (afinador, metrônomo e player de estudo).
+**Begood Music Player** (player offline com letras e equalizador) e **Begood Studio** (afinador, metrônomo e player de estudo), e o programa para Windows **Begood Split** (separador de instrumentos).
 Feito para aparecer no Google: uma página por app, textos com as palavras que as pessoas buscam, perguntas frequentes
 e dados estruturados (schema.org) de app gratuito.
 
@@ -40,13 +40,14 @@ node scripts/gerar.mjs
 e faça o commit dos `.html` gerados. Para abrir sem servidor: `node scripts/gerar.mjs --previa` (gera a pasta `../begood-music-site-previa`).
 
 **Novo app de música:** acrescente um item em `APPS` (slug, repositório, textos, ícone em `assets/img/<icone>.svg` e `.png`,
-QR Code de download) e rode o gerador. O card "Novos apps" da página inicial pode sair quando houver três apps.
+QR Code de download) e rode o gerador. O card "Novos apps" da página inicial só aparece com menos de três apps.
+Programa de PC: marque `pc: true` (instalador .exe em vez de APK, sem Obtainium/QR, com `requisitos` e `creditos`).
 
 ## Estrutura
 
 ```
 index.html                 início (apps, como instalar, atualizações, perguntas, cafezinho)
-music-player/ studio/      página de cada app (telas, funções, instalar, novidades, perguntas, privacidade)
+music-player/ studio/ split/  página de cada app (telas, funções, instalar, novidades, perguntas, privacidade)
 404.html
 assets/css/site.css        cores e componentes
 assets/js/site.js          versão ao vivo, link do APK, novidades, copiar Pix

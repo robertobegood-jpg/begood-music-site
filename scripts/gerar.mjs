@@ -139,6 +139,63 @@ const APPS = [
       ["Como mandar a música sem a guitarra para a banda?", "Depois de tirar o instrumento (e, se quiser, mudar a velocidade, o tom ou marcar um trecho), toque em Exportar áudio. O arquivo fica na pasta Música › Begood Studio e pode ser compartilhado na hora. Também dá para exportar cada instrumento em WAV para usar numa DAW."],
       ["Precisa de internet?", "Não. O Begood Studio não tem permissão de internet: tudo funciona no celular, inclusive a separação dos instrumentos e o ensaio sem sinal."]
     ]
+  },
+  {
+    slug: "split",
+    classe: "app-split",
+    nome: "Begood Split",
+    curto: "Split",
+    pc: true, // programa para Windows: instalador .exe em vez de APK
+    repo: `${GH}/Begood-Split`,
+    icone: "split-icone",
+    categoria: "Separador de instrumentos para PC",
+    titulo: "Separe a música em <em>faixas</em>, no seu PC.",
+    seo: "Begood Split: separar voz, guitarra, baixo e bateria de músicas no PC, grátis para Windows",
+    resumo: "Programa grátis para Windows 10 e 11 que separa músicas em 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou em 4 (voz, baixo, bateria e outros), com inteligência artificial. Tudo no próprio PC, sem internet e sem instalar Python.",
+    card: "Separa voz, guitarra, baixo, bateria e piano no computador, sem internet, em faixas prontas para a DAW ou para o Begood Studio.",
+    tags: ["Windows", "6 faixas", "Para DAW"],
+    botao: "Windows",
+    maquete: "separador",
+    funcoes: [
+      ["Separar em faixas", ["<strong>6 faixas</strong>: voz, guitarra, baixo, bateria, piano e outros.", "<strong>4 faixas</strong>: voz, baixo, bateria e outros (um pouco mais limpa na voz e na bateria).", "Inteligência artificial <strong>HTDemucs</strong>, a mesma usada pelos profissionais."]],
+      ["No seu PC", ["Tudo <strong>no próprio computador</strong>, sem internet e sem mandar a música para lugar nenhum.", "<strong>Não precisa instalar Python</strong> nem nada além do programa.", "Sem cadastro, sem anúncios e sem limite de músicas."]],
+      ["Fácil de usar", ["<strong>Arraste músicas ou pastas</strong> para a janela, ou para o ícone do programa.", "Separa <strong>várias músicas</strong> em fila, mostrando o progresso e o tempo que falta.", "Abre MP3, FLAC, WAV, M4A, OGG, OPUS, AAC, WMA, AIFF e outros."]],
+      ["Pronto para a DAW", ["Formato à sua escolha: <strong>WAV 16 ou 24 bits</strong>, FLAC ou MP3 320 kbps.", "Arquivos numerados (<strong>01 Voz.wav</strong>, 02 Guitarra.wav…), todos alinhados: é só colocar um embaixo do outro no Reaper, Studio One ou Audacity.", "Também abrem no celular, no <strong>Begood Studio</strong> (Player › Biblioteca › Abrir faixas separadas)."]],
+      ["Sempre atualizado", ["<strong>Avisa sozinho</strong> quando sai uma versão nova.", "Também tem o botão Procurar atualizações."]]
+    ],
+    privacidade: [
+      "<strong>Sem cadastro, sem anúncios e sem servidor próprio.</strong> A separação é feita no seu PC e as músicas nunca saem dele.",
+      "A internet é usada só para conferir, no GitHub, se há versão nova. Nenhum dado seu é enviado; sem internet, o aviso simplesmente não aparece.",
+      "O instalador não pede senha de administrador: instala só para o seu usuário."
+    ],
+    requisitos: [
+      ["Sistema", "Windows 10 ou 11, 64 bits"],
+      ["Memória", "Uns 4 GB livres"],
+      ["Disco", "Cerca de 1 GB"],
+      ["Velocidade", "Depende do processador: num PC de 12 núcleos, uma música de 4 minutos leva uns 4 minutos"]
+    ],
+    creditos: [
+      "<strong>Demucs / HTDemucs</strong> (Meta), licença MIT.",
+      "<strong>ONNX Runtime</strong> (Microsoft), licença MIT.",
+      "<strong>FFmpeg</strong>, licença GPL.",
+      "O Begood Split é um programa livre, licença <strong>GPL-3.0</strong>."
+    ],
+    instalar: [
+      ["Baixe o instalador", "No computador, clique em “Baixar para Windows” nesta página (cerca de 200 MB)."],
+      ["Passe pelo aviso do Windows", "Se aparecer “O Windows protegeu o computador”, clique em “Mais informações › Executar assim mesmo”. O aviso aparece porque o programa não tem assinatura digital paga."],
+      ["Instale", "Siga o instalador. Ele não pede senha de administrador."],
+      ["Separe", "Arraste as músicas, escolha 6 ou 4 faixas e o formato e clique em Separar. As faixas vão para Documentos › Begood Split."]
+    ],
+    atualizar: "O programa avisa sozinho quando sai uma versão nova. É só baixar o instalador novo e instalar por cima.",
+    dica: "A primeira separação demora um pouco mais, porque o separador é preparado uma única vez.",
+    faq: [
+      ["Como separar a voz e os instrumentos de uma música no PC?", "Instale o Begood Split, arraste a música para a janela, escolha 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou 4 faixas e clique em Separar. Cada música vira uma pasta com um arquivo para cada instrumento."],
+      ["Precisa de internet ou de Python?", "Não. A separação é feita no próprio computador, sem internet, e o programa já vem com tudo que precisa. A internet só é usada para avisar quando sai uma versão nova."],
+      ["Quanto tempo leva para separar uma música?", "Depende do processador. Num PC de 12 núcleos, uma música de 4 minutos leva uns 4 minutos. A primeira vez demora um pouco mais."],
+      ["Dá para usar as faixas numa DAW?", "Dá. Os arquivos saem numerados e alinhados, em WAV 16 ou 24 bits, FLAC ou MP3: é só colocar um embaixo do outro no Reaper, Studio One, Audacity ou outra DAW."],
+      ["Por que o Windows mostra um aviso ao instalar?", "Porque o programa não tem assinatura digital paga. Clique em Mais informações › Executar assim mesmo. O código é aberto e pode ser conferido no GitHub."],
+      ["Funciona em qual Windows?", "Windows 10 ou 11, de 64 bits, com uns 4 GB de memória livre e cerca de 1 GB de disco."]
+    ]
   }
 ];
 
@@ -148,7 +205,8 @@ const FAQ_GERAL = [
   ["Por que o Android mostra um aviso ao instalar?", "O aviso aparece para qualquer app que não veio da Play Store. Basta permitir “instalar apps desconhecidos” para o navegador ou o gerenciador de arquivos. Se o Play Protect avisar, toque em Mais detalhes › Instalar mesmo assim."],
   ["Os apps são mesmo grátis?", "São. Não têm anúncios, compras dentro do app nem assinatura. Quem quiser pode apoiar com um cafezinho por Pix."],
   ["Como atualizar para uma versão nova?", "Baixe o APK da versão nova e instale por cima: os dados continuam. Para ser avisado sozinho, use o Obtainium, um app gratuito que acompanha as versões no GitHub."],
-  ["Funciona em qual versão do Android?", "Android 8.0 ou mais novo, em celulares de qualquer marca."]
+  ["Funciona em qual versão do Android?", "Android 8.0 ou mais novo, em celulares de qualquer marca."],
+  ["Tem programa para computador?", "Tem. O Begood Split, para Windows 10 e 11 (64 bits), separa músicas em voz, guitarra, baixo, bateria, piano e outros, no próprio PC e sem internet. As faixas também abrem no Begood Studio do celular."]
 ];
 
 // ---------- utilidades ----------
@@ -309,10 +367,11 @@ function home() {
       <div class="tags">${x.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
       <div class="acoes">
         <a class="btn" href="${link(pref, x.slug + "/")}">Detalhes</a>
-        <a class="btn btn-solido" href="https://github.com/${x.repo}/releases/latest" data-repo="${x.repo}" data-campo="baixar" rel="noopener">${I.baixar}APK</a>
+        <a class="btn btn-solido" href="https://github.com/${x.repo}/releases/latest" data-repo="${x.repo}" data-campo="baixar" rel="noopener">${I.baixar}${x.botao || "APK"}</a>
       </div>
     </article>`).join("\n");
-  const breve = `    <article class="app-card app-breve revela">
+  // Card "Novos apps": só aparece enquanto houver menos de três apps.
+  const breve = APPS.length >= 3 ? "" : `    <article class="app-card app-breve revela">
       <div class="app-card-topo"><span class="breve-icone" aria-hidden="true">+</span></div>
       <p class="hud" style="margin:0;flex:none"><span class="dot"></span>Em breve</p>
       <h3 class="heading">Novos apps</h3>
@@ -326,20 +385,20 @@ function home() {
     name: SITE,
     url: SITE_URL + "/",
     inLanguage: "pt-BR",
-    description: "Apps Android gratuitos, sem anúncios e de código aberto para quem ama música.",
+    description: "Apps gratuitos, sem anúncios e de código aberto para quem ama música, no Android e no Windows.",
     author: { "@type": "Person", name: AUTOR }
   };
 
-  return `${cabeca({ titulo: "Begood Music: player de música, afinador e metrônomo grátis para Android", descricao: "Apps Android gratuitos, sem anúncios e de código aberto para quem ama música: Begood Music Player (player offline com letras e equalizador) e Begood Studio (afinador, metrônomo, player de estudo e separador de instrumentos).", pref, canonico: "/", imagem: "og.png", dados: [site, dadosFaq(FAQ_GERAL)] })}
+  return `${cabeca({ titulo: "Begood Music: player de música, afinador, metrônomo e separador de instrumentos grátis", descricao: "Apps gratuitos, sem anúncios e de código aberto para quem ama música: Begood Music Player (player offline com letras e equalizador), Begood Studio (afinador, metrônomo, player de estudo e separador de instrumentos) para Android e Begood Split (separador de instrumentos para Windows).", pref, canonico: "/", imagem: "og.png", dados: [site, dadosFaq(FAQ_GERAL)] })}
 <body class="app-bmp">
 ${topo(pref, "apps")}
 <main id="conteudo">
 <section class="hero">
   <canvas class="campo" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="hud"><span class="dot"></span>00/Begood Music · Apps Android</p>
+    <p class="hud"><span class="dot"></span>00/Begood Music · Android e Windows</p>
     <h1 class="display display-lg">Apps para quem<br><em>vive</em> de música.</h1>
-    <p class="lead">Ouvir a sua coleção com letra e equalizador de verdade, afinar o instrumento, marcar o tempo e tirar aquele solo devagar. Gratuitos, sem anúncios e de código aberto.</p>
+    <p class="lead">Ouvir a sua coleção com letra e equalizador de verdade, afinar o instrumento, marcar o tempo, tirar aquele solo devagar e separar a música em faixas no PC. Gratuitos, sem anúncios e de código aberto.</p>
     <div class="hero-acoes">
       <a class="btn btn-solido" href="#apps">Ver os apps ${I.seta}</a>
       <a class="btn" href="#instalar">Como instalar</a>
@@ -348,7 +407,7 @@ ${topo(pref, "apps")}
       <div><span class="hud">Apps</span><strong>${APPS.length}</strong></div>
       <div><span class="hud">Anúncios</span><strong>0</strong></div>
       <div><span class="hud">Preço</span><strong>R$&nbsp;0</strong></div>
-      <div><span class="hud">Android</span><strong>8+</strong></div>
+      <div><span class="hud">Código</span><strong>Aberto</strong></div>
     </div>
   </div>
 </section>
@@ -374,6 +433,7 @@ ${breve}
       ["Pronto", "Abra o app. Para atualizar, instale a versão nova por cima: os dados continuam salvos."]
     ])}
     ${marcasCelular()}
+    <p class="muted revela" style="margin-top:24px;max-width:46em"><strong style="color:var(--ink);font-weight:500">No computador:</strong> o Begood Split é um programa para Windows, com instalador próprio. Veja o passo a passo na <a href="${link(pref, "split/#instalar")}">página do Begood Split</a>.</p>
   </div>
 </section>
 
@@ -444,6 +504,18 @@ function maqueteLateral(x) {
         <div class="cordas" data-af="cordas"><i>E2</i><i class="on">A2</i><i>D3</i><i>G3</i><i>B3</i><i>E4</i></div>
       </div>`;
   }
+  if (x.maquete === "separador") {
+    const faixas = ["Voz", "Guitarra", "Baixo", "Bateria", "Piano", "Outros"];
+    return `<div class="maquete marcas maquete-separador" aria-hidden="true">${cantos}
+        <p class="hud" style="margin:0">Begood Split · 6 faixas · WAV 24 bits</p>
+        <p class="faixa-nome" style="margin-top:18px">Estrada de Luz.mp3</p>
+        <p class="hud" style="margin:0" data-sp="status">Separando · 64%</p>
+        <div class="barra-tempo" style="margin-top:12px"><i data-sp="barra" style="width:64%"></i></div>
+        <ul class="faixas" data-sp="faixas">
+${faixas.map((f, i) => `          <li><span class="hud">${num(i + 1)}</span><b>${f}.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>`).join("\n")}
+        </ul>
+      </div>`;
+  }
   return "";
 }
 
@@ -461,6 +533,12 @@ setInterval(function(){c=c*0.82+(Math.random()-.5)*0.6;if(Math.abs(c)<0.4){k=(k+
 var n=C[k];N.innerHTML=n[0]+'<small>'+n[1]+'</small>';S.textContent=(c>0?'+':'')+c.toFixed(1).replace('.',',')+' cents';S.className='cents'+(Math.abs(c)<2?' ok':'');
 H.textContent=(n[2]*Math.pow(2,c/1200)).toFixed(2).replace('.',',')+' Hz';P.style.transform='rotate('+(c*1.6)+'deg)';
 for(var j=0;j<K.length;j++)K[j].className=j===k?'on':'';},180);})();
+</script>`,
+  separador: `<script>
+(function(){var q=function(n){return document.querySelector('[data-sp='+n+']')},B=q('barra'),S=q('status'),F=q('faixas').children,p=64,h=0;
+function m(){var n=Math.min(F.length,Math.floor(p/100*(F.length+1)));for(var j=0;j<F.length;j++)F[j].className=j<n?'ok':'';
+B.style.width=p+'%';S.textContent=p<100?'Separando · '+p+'%':'Pronto · 6 faixas alinhadas';}
+m();if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;setInterval(function(){if(p>=100){if(++h<12)return;h=0;p=0;}else p=Math.min(100,p+2);m();},260);})();
 </script>`
 };
 
@@ -471,11 +549,11 @@ function paginaApp(x) {
   const url = `${SITE_URL}/${x.slug}/`;
   const app = {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
+    "@type": x.pc ? "SoftwareApplication" : "MobileApplication",
     name: x.nome,
     url,
     description: x.resumo,
-    operatingSystem: "Android 8.0 ou superior",
+    operatingSystem: x.pc ? "Windows 10, Windows 11 (64 bits)" : "Android 8.0 ou superior",
     applicationCategory: "MultimediaApplication",
     image: `${SITE_URL}/assets/img/${x.icone}.png`,
     downloadUrl: `https://github.com/${x.repo}/releases/latest`,
@@ -531,13 +609,17 @@ ${topo(pref, "")}
         <div class="baixar-linha"><span class="hud">Publicada</span><span data-repo="${x.repo}" data-campo="data">···</span></div>
         <div class="baixar-linha"><span class="hud">Tamanho</span><span data-repo="${x.repo}" data-campo="tamanho">···</span></div>
         <div class="baixar-linha"><span class="hud">Licença</span><span>GPL-3.0</span></div>
-        <a class="btn btn-solido btn-largo" href="https://github.com/${x.repo}/releases/latest" data-repo="${x.repo}" data-campo="baixar" rel="noopener">${I.baixar}<span data-rotulo>Baixar APK</span></a>
+${x.pc ? `        <a class="btn btn-solido btn-largo" href="https://github.com/${x.repo}/releases/latest" data-repo="${x.repo}" data-campo="baixar" rel="noopener">${I.baixar}<span data-rotulo="Baixar para Windows">Baixar para Windows</span></a>
+        <a class="btn btn-largo" href="https://github.com/${x.repo}" rel="noopener">${I.github}Código no GitHub</a>
+        <p class="hud aviso-req">Windows 10 ou 11 · 64 bits · Grátis</p>
+        <p class="muted" style="font-size:14px;margin:12px 0 0">Instalador de cerca de 200 MB, sem senha de administrador. Se o Windows avisar, clique em <strong>Mais informações › Executar assim mesmo</strong>.</p>`
+  : `        <a class="btn btn-solido btn-largo" href="https://github.com/${x.repo}/releases/latest" data-repo="${x.repo}" data-campo="baixar" rel="noopener">${I.baixar}<span data-rotulo="Baixar APK">Baixar APK</span></a>
         <a class="btn btn-largo" href="obtainium://add/https://github.com/${x.repo}">Adicionar ao Obtainium</a>
         <p class="hud aviso-req">Android 8.0 ou superior · Grátis</p>
         <div class="baixar-qr">
           <img src="${pref}assets/img/${x.qr}" width="96" height="96" alt="QR Code para baixar o ${x.nome}" loading="lazy">
           <p>Está no computador? Aponte a câmera do celular para baixar direto.</p>
-        </div>
+        </div>`}
       </div>
     </div>
   </div>
@@ -559,7 +641,7 @@ ${secaoDestaques}
   <div class="wrap">
     ${rotulo(++n, "Como instalar")}
     ${passos(x.instalar)}
-    ${marcasCelular()}
+    ${x.pc ? "" : marcasCelular()}
     <p class="muted revela" style="margin-top:24px;max-width:46em"><strong style="color:var(--ink);font-weight:500">Atualizações:</strong> ${x.atualizar}${x.dica ? `<br><strong style="color:var(--ink);font-weight:500">Dica:</strong> ${x.dica}` : ""}</p>
   </div>
 </section>
@@ -597,12 +679,21 @@ ${x.privacidade.map((p) => `          <li>${p}</li>`).join("\n")}
         </ul>
       </div>
       <div class="revela">
-        <table class="tabela">
+${x.pc ? `        <table class="tabela">
+          <thead><tr><th>Requisito</th><th>Detalhe</th></tr></thead>
+          <tbody>
+${x.requisitos.map(([p, d]) => `            <tr><td>${p}</td><td>${d}</td></tr>`).join("\n")}
+          </tbody>
+        </table>
+        <p class="hud" style="margin:28px 0 0">Créditos</p>
+        <ul class="lista-simples">
+${x.creditos.map((c) => `          <li>${c}</li>`).join("\n")}
+        </ul>` : `        <table class="tabela">
           <thead><tr><th>Permissão</th><th>Para quê</th></tr></thead>
           <tbody>
 ${x.permissoes.map(([p, d]) => `            <tr><td>${p}</td><td>${d}</td></tr>`).join("\n")}
           </tbody>
-        </table>
+        </table>`}
         <p class="muted" style="font-size:14px;margin-top:20px">Código aberto: dá para conferir tudo isso no <a href="https://github.com/${x.repo}" rel="noopener">repositório no GitHub</a>. Dúvidas ou problemas: <a href="https://github.com/${x.repo}/issues" rel="noopener">abra uma issue</a>.</p>
       </div>
     </div>

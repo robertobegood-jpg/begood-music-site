@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Begood Split: separar voz, guitarra, baixo e bateria de músicas no PC, grátis para Windows | Begood Music</title>
+<meta name="description" content="Programa grátis para Windows 10 e 11 que separa músicas em 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou em 4 (voz, baixo, bateria e outros), com inteligência artificial. Tudo no próprio PC, sem internet e sem instalar Python.">
+<meta name="author" content="Roberto Santos da Silva">
+<meta name="theme-color" content="#14161c">
+<link rel="canonical" href="https://begoodmusic.vercel.app/split/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Begood Music">
+<meta property="og:title" content="Begood Split: separar voz, guitarra, baixo e bateria de músicas no PC, grátis para Windows | Begood Music">
+<meta property="og:description" content="Programa grátis para Windows 10 e 11 que separa músicas em 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou em 4 (voz, baixo, bateria e outros), com inteligência artificial. Tudo no próprio PC, sem internet e sem instalar Python.">
+<meta property="og:url" content="https://begoodmusic.vercel.app/split/">
+<meta property="og:image" content="https://begoodmusic.vercel.app/assets/img/split-icone.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/bmp-icone.png">
+<link rel="preload" href="../assets/fonts/archivo.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Begood Split","url":"https://begoodmusic.vercel.app/split/","description":"Programa grátis para Windows 10 e 11 que separa músicas em 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou em 4 (voz, baixo, bateria e outros), com inteligência artificial. Tudo no próprio PC, sem internet e sem instalar Python.","operatingSystem":"Windows 10, Windows 11 (64 bits)","applicationCategory":"MultimediaApplication","image":"https://begoodmusic.vercel.app/assets/img/split-icone.png","downloadUrl":"https://github.com/robertobegood-jpg/Begood-Split/releases/latest","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"author":{"@type":"Person","name":"Roberto Santos da Silva"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Como separar a voz e os instrumentos de uma música no PC?","acceptedAnswer":{"@type":"Answer","text":"Instale o Begood Split, arraste a música para a janela, escolha 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou 4 faixas e clique em Separar. Cada música vira uma pasta com um arquivo para cada instrumento."}},{"@type":"Question","name":"Precisa de internet ou de Python?","acceptedAnswer":{"@type":"Answer","text":"Não. A separação é feita no próprio computador, sem internet, e o programa já vem com tudo que precisa. A internet só é usada para avisar quando sai uma versão nova."}},{"@type":"Question","name":"Quanto tempo leva para separar uma música?","acceptedAnswer":{"@type":"Answer","text":"Depende do processador. Num PC de 12 núcleos, uma música de 4 minutos leva uns 4 minutos. A primeira vez demora um pouco mais."}},{"@type":"Question","name":"Dá para usar as faixas numa DAW?","acceptedAnswer":{"@type":"Answer","text":"Dá. Os arquivos saem numerados e alinhados, em WAV 16 ou 24 bits, FLAC ou MP3: é só colocar um embaixo do outro no Reaper, Studio One, Audacity ou outra DAW."}},{"@type":"Question","name":"Por que o Windows mostra um aviso ao instalar?","acceptedAnswer":{"@type":"Answer","text":"Porque o programa não tem assinatura digital paga. Clique em Mais informações › Executar assim mesmo. O código é aberto e pode ser conferido no GitHub."}},{"@type":"Question","name":"Funciona em qual Windows?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 ou 11, de 64 bits, com uns 4 GB de memória livre e cerca de 1 GB de disco."}}]}</script>
+</head>
+<body class="app-split">
+<a class="visually-hidden" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="../"><svg class="marca-sinal" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="17" height="17" stroke="currentColor"/><path d="M7 14v-3M10 15V7M13 13V9M16 14v-2" stroke="#E0A030" stroke-width="1.6" stroke-linecap="square"/></svg><span class="hud"><b>Begood</b> Music</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../#apps">Apps</a>
+      <a href="../#instalar">Instalar</a>
+      <a class="nav-extra" href="../#cafezinho">Cafezinho</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+<section class="hero">
+  <canvas class="campo" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <a class="voltar hud" href="../"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Todos os apps</a>
+    <div class="app-hero">
+      <div>
+        <img class="app-icone app-icone-lg" src="../assets/img/split-icone.svg" width="96" height="96" alt="Ícone do Begood Split">
+        <p class="hud"><span class="dot"></span>Begood Split · Separador de instrumentos para PC</p>
+        <h1 class="display display-lg" style="font-size:clamp(40px,7.5vw,80px)">Separe a música em <em>faixas</em>, no seu PC.</h1>
+        <p class="lead">Programa grátis para Windows 10 e 11 que separa músicas em 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou em 4 (voz, baixo, bateria e outros), com inteligência artificial. Tudo no próprio PC, sem internet e sem instalar Python.</p>
+      </div>
+      <div class="baixar marcas" id="baixar"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <div class="baixar-linha"><span class="hud">Versão</span><span data-repo="robertobegood-jpg/Begood-Split" data-campo="versao">···</span></div>
+        <div class="baixar-linha"><span class="hud">Publicada</span><span data-repo="robertobegood-jpg/Begood-Split" data-campo="data">···</span></div>
+        <div class="baixar-linha"><span class="hud">Tamanho</span><span data-repo="robertobegood-jpg/Begood-Split" data-campo="tamanho">···</span></div>
+        <div class="baixar-linha"><span class="hud">Licença</span><span>GPL-3.0</span></div>
+        <a class="btn btn-solido btn-largo" href="https://github.com/robertobegood-jpg/Begood-Split/releases/latest" data-repo="robertobegood-jpg/Begood-Split" data-campo="baixar" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1.5v9M4 7l4 4 4-4M2 14.5h12"/></svg><span data-rotulo="Baixar para Windows">Baixar para Windows</span></a>
+        <a class="btn btn-largo" href="https://github.com/robertobegood-jpg/Begood-Split" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>Código no GitHub</a>
+        <p class="hud aviso-req">Windows 10 ou 11 · 64 bits · Grátis</p>
+        <p class="muted" style="font-size:14px;margin:12px 0 0">Instalador de cerca de 200 MB, sem senha de administrador. Se o Windows avisar, clique em <strong>Mais informações › Executar assim mesmo</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">01/Funções</div>
+    <div class="funcoes-com-maquete">
+      <div class="funcoes">
+        <div class="funcao revela"><span class="hud">01</span><h3 class="heading">Separar em faixas</h3><ul><li><strong>6 faixas</strong>: voz, guitarra, baixo, bateria, piano e outros.</li><li><strong>4 faixas</strong>: voz, baixo, bateria e outros (um pouco mais limpa na voz e na bateria).</li><li>Inteligência artificial <strong>HTDemucs</strong>, a mesma usada pelos profissionais.</li></ul></div>
+        <div class="funcao revela"><span class="hud">02</span><h3 class="heading">No seu PC</h3><ul><li>Tudo <strong>no próprio computador</strong>, sem internet e sem mandar a música para lugar nenhum.</li><li><strong>Não precisa instalar Python</strong> nem nada além do programa.</li><li>Sem cadastro, sem anúncios e sem limite de músicas.</li></ul></div>
+        <div class="funcao revela"><span class="hud">03</span><h3 class="heading">Fácil de usar</h3><ul><li><strong>Arraste músicas ou pastas</strong> para a janela, ou para o ícone do programa.</li><li>Separa <strong>várias músicas</strong> em fila, mostrando o progresso e o tempo que falta.</li><li>Abre MP3, FLAC, WAV, M4A, OGG, OPUS, AAC, WMA, AIFF e outros.</li></ul></div>
+        <div class="funcao revela"><span class="hud">04</span><h3 class="heading">Pronto para a DAW</h3><ul><li>Formato à sua escolha: <strong>WAV 16 ou 24 bits</strong>, FLAC ou MP3 320 kbps.</li><li>Arquivos numerados (<strong>01 Voz.wav</strong>, 02 Guitarra.wav…), todos alinhados: é só colocar um embaixo do outro no Reaper, Studio One ou Audacity.</li><li>Também abrem no celular, no <strong>Begood Studio</strong> (Player › Biblioteca › Abrir faixas separadas).</li></ul></div>
+        <div class="funcao revela"><span class="hud">05</span><h3 class="heading">Sempre atualizado</h3><ul><li><strong>Avisa sozinho</strong> quando sai uma versão nova.</li><li>Também tem o botão Procurar atualizações.</li></ul></div>
+      </div>
+      <div class="revela maquete-lado"><div class="maquete marcas maquete-separador" aria-hidden="true"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <p class="hud" style="margin:0">Begood Split · 6 faixas · WAV 24 bits</p>
+        <p class="faixa-nome" style="margin-top:18px">Estrada de Luz.mp3</p>
+        <p class="hud" style="margin:0" data-sp="status">Separando · 64%</p>
+        <div class="barra-tempo" style="margin-top:12px"><i data-sp="barra" style="width:64%"></i></div>
+        <ul class="faixas" data-sp="faixas">
+          <li><span class="hud">01</span><b>Voz.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+          <li><span class="hud">02</span><b>Guitarra.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+          <li><span class="hud">03</span><b>Baixo.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+          <li><span class="hud">04</span><b>Bateria.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+          <li><span class="hud">05</span><b>Piano.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+          <li><span class="hud">06</span><b>Outros.wav</b><span class="onda"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="instalar">
+  <div class="wrap">
+    <div class="rotulo hud revela">02/Como instalar</div>
+    <ol class="passos">
+    <li class="revela"><strong>Baixe o instalador</strong><p>No computador, clique em “Baixar para Windows” nesta página (cerca de 200 MB).</p></li>
+    <li class="revela"><strong>Passe pelo aviso do Windows</strong><p>Se aparecer “O Windows protegeu o computador”, clique em “Mais informações › Executar assim mesmo”. O aviso aparece porque o programa não tem assinatura digital paga.</p></li>
+    <li class="revela"><strong>Instale</strong><p>Siga o instalador. Ele não pede senha de administrador.</p></li>
+    <li class="revela"><strong>Separe</strong><p>Arraste as músicas, escolha 6 ou 4 faixas e o formato e clique em Separar. As faixas vão para Documentos › Begood Split.</p></li>
+  </ol>
+    
+    <p class="muted revela" style="margin-top:24px;max-width:46em"><strong style="color:var(--ink);font-weight:500">Atualizações:</strong> O programa avisa sozinho quando sai uma versão nova. É só baixar o instalador novo e instalar por cima.<br><strong style="color:var(--ink);font-weight:500">Dica:</strong> A primeira separação demora um pouco mais, porque o separador é preparado uma única vez.</p>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">03/Novidades</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">O que mudou na <em>última</em> versão.</h2>
+        <a class="btn" href="https://github.com/robertobegood-jpg/Begood-Split/releases" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.34.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>Todas as versões</a>
+      </div>
+      <div class="notas revela" data-repo="robertobegood-jpg/Begood-Split" data-campo="notas" aria-live="polite">
+        <div class="esqueleto" style="width:40%"></div><div class="esqueleto"></div><div class="esqueleto" style="width:85%"></div><div class="esqueleto" style="width:70%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <div class="rotulo hud revela">04/Perguntas frequentes</div>
+    <div class="faq">
+      <details class="revela"><summary>Como separar a voz e os instrumentos de uma música no PC?</summary><p>Instale o Begood Split, arraste a música para a janela, escolha 6 faixas (voz, guitarra, baixo, bateria, piano e outros) ou 4 faixas e clique em Separar. Cada música vira uma pasta com um arquivo para cada instrumento.</p></details>
+      <details class="revela"><summary>Precisa de internet ou de Python?</summary><p>Não. A separação é feita no próprio computador, sem internet, e o programa já vem com tudo que precisa. A internet só é usada para avisar quando sai uma versão nova.</p></details>
+      <details class="revela"><summary>Quanto tempo leva para separar uma música?</summary><p>Depende do processador. Num PC de 12 núcleos, uma música de 4 minutos leva uns 4 minutos. A primeira vez demora um pouco mais.</p></details>
+      <details class="revela"><summary>Dá para usar as faixas numa DAW?</summary><p>Dá. Os arquivos saem numerados e alinhados, em WAV 16 ou 24 bits, FLAC ou MP3: é só colocar um embaixo do outro no Reaper, Studio One, Audacity ou outra DAW.</p></details>
+      <details class="revela"><summary>Por que o Windows mostra um aviso ao instalar?</summary><p>Porque o programa não tem assinatura digital paga. Clique em Mais informações › Executar assim mesmo. O código é aberto e pode ser conferido no GitHub.</p></details>
+      <details class="revela"><summary>Funciona em qual Windows?</summary><p>Windows 10 ou 11, de 64 bits, com uns 4 GB de memória livre e cerca de 1 GB de disco.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="privacidade">
+  <div class="wrap">
+    <div class="rotulo hud revela">05/Privacidade</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Política de <em>privacidade</em>.</h2>
+        <ul class="lista-simples">
+          <li><strong>Sem cadastro, sem anúncios e sem servidor próprio.</strong> A separação é feita no seu PC e as músicas nunca saem dele.</li>
+          <li>A internet é usada só para conferir, no GitHub, se há versão nova. Nenhum dado seu é enviado; sem internet, o aviso simplesmente não aparece.</li>
+          <li>O instalador não pede senha de administrador: instala só para o seu usuário.</li>
+        </ul>
+      </div>
+      <div class="revela">
+        <table class="tabela">
+          <thead><tr><th>Requisito</th><th>Detalhe</th></tr></thead>
+          <tbody>
+            <tr><td>Sistema</td><td>Windows 10 ou 11, 64 bits</td></tr>
+            <tr><td>Memória</td><td>Uns 4 GB livres</td></tr>
+            <tr><td>Disco</td><td>Cerca de 1 GB</td></tr>
+            <tr><td>Velocidade</td><td>Depende do processador: num PC de 12 núcleos, uma música de 4 minutos leva uns 4 minutos</td></tr>
+          </tbody>
+        </table>
+        <p class="hud" style="margin:28px 0 0">Créditos</p>
+        <ul class="lista-simples">
+          <li><strong>Demucs / HTDemucs</strong> (Meta), licença MIT.</li>
+          <li><strong>ONNX Runtime</strong> (Microsoft), licença MIT.</li>
+          <li><strong>FFmpeg</strong>, licença GPL.</li>
+          <li>O Begood Split é um programa livre, licença <strong>GPL-3.0</strong>.</li>
+        </ul>
+        <p class="muted" style="font-size:14px;margin-top:20px">Código aberto: dá para conferir tudo isso no <a href="https://github.com/robertobegood-jpg/Begood-Split" rel="noopener">repositório no GitHub</a>. Dúvidas ou problemas: <a href="https://github.com/robertobegood-jpg/Begood-Split/issues" rel="noopener">abra uma issue</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="cafezinho">
+  <div class="wrap">
+    <div class="rotulo hud revela">06/Cafezinho</div>
+    <div class="duas">
+      <div class="revela">
+        <h2 class="display display-md secao-titulo">Ajudou no seu <em>som</em>?</h2>
+        <p class="lead">Os apps são gratuitos e vão continuar assim. Se algum faz parte do seu dia, dá para apoiar com um Pix de qualquer valor.</p>
+      </div>
+      <div class="marcas pix revela"><span class="canto c1"></span><span class="canto c2"></span><span class="canto c3"></span><span class="canto c4"></span>
+        <img class="pix-qr" src="../assets/img/qr-pix.svg" width="168" height="168" alt="QR Code do Pix">
+        <div>
+          <p class="hud">Chave Pix · e-mail</p>
+          <p style="margin:6px 0 0;font-weight:500;word-break:break-all">robertobegood+itau@gmail.com</p>
+          <p class="muted" style="margin:0;font-size:14px">Roberto Santos da Silva</p>
+          <code class="pix-codigo" id="pix">00020126630014br.gov.bcb.pix0128robertobegood+itau@gmail.com0209Cafezinho5204000053039865802BR5923Roberto Santos da Silva6009Sao Paulo62070503***63047463</code>
+          <button class="btn btn-solido btn-largo" type="button" data-copiar="#pix"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="5" width="9" height="9"/><path d="M11 5V2H2v9h3"/></svg>Copiar Pix copia e cola</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script>
+(function(){var q=function(n){return document.querySelector('[data-sp='+n+']')},B=q('barra'),S=q('status'),F=q('faixas').children,p=64,h=0;
+function m(){var n=Math.min(F.length,Math.floor(p/100*(F.length+1)));for(var j=0;j<F.length;j++)F[j].className=j<n?'ok':'';
+B.style.width=p+'%';S.textContent=p<100?'Separando · '+p+'%':'Pronto · 6 faixas alinhadas';}
+m();if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;setInterval(function(){if(p>=100){if(++h<12)return;h=0;p=0;}else p=Math.min(100,p+2);m();},260);})();
+</script>
+<footer class="rodape">
+  <div class="wrap">
+    <div>
+      <p class="hud"><b>Roberto Santos da Silva</b></p>
+      <p class="muted" style="margin:6px 0 0;font-size:14px">Apps de música gratuitos, sem anúncios e de código aberto (GPL-3.0).</p>
+    </div>
+    <div class="rodape-links hud">
+      <a href="../music-player/">Begood Music Player</a>
+      <a href="../studio/">Begood Studio</a>
+      <a href="../split/">Begood Split</a>
+      <a href="https://github.com/robertobegood-jpg" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/campo.js" defer></script>
+</body>
+</html>

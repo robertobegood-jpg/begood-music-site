@@ -96,7 +96,8 @@
     return fetch("https://api.github.com/repos/" + repo + "/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
-        var apk = (d.assets || []).filter(function (a) { return /\.apk$/i.test(a.name); })[0];
+        // Arquivo para baixar: APK (Android) ou instalador .exe (Windows).
+        var apk = (d.assets || []).filter(function (a) { return /\.(apk|exe)$/i.test(a.name); })[0];
         var info = {
           versao: d.tag_name || d.name || "",
           data: d.published_at,
@@ -127,7 +128,7 @@
           el.href = info.apk;
           el.setAttribute("download", "");
           var rot = el.querySelector("[data-rotulo]");
-          if (rot && info.versao) rot.textContent = "Baixar APK " + info.versao;
+          if (rot && info.versao) rot.textContent = (rot.getAttribute("data-rotulo") || "Baixar APK") + " " + info.versao;
         }
         else if (campo === "notas") {
           el.innerHTML = info.notas ? markdown(info.notas) :
