@@ -91,32 +91,38 @@ const APPS = [
     qr: "qr-studio.svg",
     categoria: "Afinador, metrônomo e estudo",
     titulo: "Afine, marque o tempo e <em>tire</em> o solo.",
-    seo: "Begood Studio: afinador, metrônomo e player para estudar música, grátis para Android",
-    resumo: "Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Grátis, sem anúncios e sem internet.",
-    card: "Afinador com precisão de centésimos de cent, metrônomo com treino de velocidade e player para tirar solos devagar.",
-    tags: ["Afinador", "Metrônomo", "Velocidade e tom"],
+    seo: "Begood Studio: afinador, metrônomo, separador de instrumentos e player de estudo, grátis para Android",
+    resumo: "Afinador cromático de alta precisão, metrônomo com treino de velocidade e player que deixa a música mais lenta sem mudar o tom, com repetição A/B. Separa voz, guitarra, baixo, bateria e piano no próprio celular, com inteligência artificial e sem internet. Grátis e sem anúncios.",
+    card: "Afinador com precisão de centésimos de cent, metrônomo, player para tirar solos devagar e separador de instrumentos no celular.",
+    tags: ["Afinador", "Metrônomo", "Separa instrumentos"],
     maquete: "afinador",
     prints: [
       ["studio-afinador.jpg", "Afinador", "Afinador do Begood Studio com ponteiro, cordas do violão e Lá 440 Hz"],
       ["studio-metronomo.jpg", "Metrônomo", "Metrônomo do Begood Studio em 100 BPM, compasso 4/4"],
-      ["studio-player.jpg", "Player", "Player de estudo com forma de onda e repetição de trecho A/B"]
+      ["studio-player.jpg", "Player", "Player de estudo com forma de onda e repetição de trecho A/B"],
+      ["studio-instrumentos.jpg", "Instrumentos", "Instrumentos separados no Begood Studio: voz tirada, trecho A–B marcado e volume de cada faixa"]
     ],
     funcoes: [
       ["Afinador", ["Mostra a nota, quantos <strong>cents</strong> está acima ou abaixo e a frequência.", "<strong>Ponteiro</strong> ou <strong>estrobo</strong>, como os afinadores de bancada.", "Precisão medida nos testes: cerca de <strong>0,01 cent</strong> em som limpo.", "Toque numa corda para <strong>fixá-la</strong> quando ela estiver muito desafinada."]],
       ["Afinações", ["Violão e guitarra: padrão, meio tom e um tom abaixo, Drop D, Open G, Open D e DADGAD.", "Guitarra de 7 cordas, <strong>baixo</strong> de 4 e 5 cordas, <strong>cavaquinho</strong>, ukulele.", "Violino, bandolim, viola de arco, violoncelo ou modo cromático.", "Lá de referência de 415 a 466 Hz (atalhos 432, 440 e 442)."]],
       ["Metrônomo", ["20 a 300 BPM, ajuste fino, barra ou <strong>toque no ritmo</strong>.", "Compassos de 2/4 a 12/8; colcheias, tercinas e semicolcheias.", "<strong>Treino de velocidade</strong>: sobe o BPM sozinho a cada tantos compassos.", "<strong>Compassos mudos</strong> para treinar o tempo interno."]],
-      ["Player de estudo", ["Velocidade de <strong>25% a 200% sem mudar o tom</strong>.", "<strong>Tom</strong> ±12 semitons com ajuste fino em cents.", "Abre MP3, M4A, FLAC, WAV e OGG do celular."]],
+      ["Player de estudo", ["Velocidade de <strong>25% a 200% sem mudar o tom</strong>.", "<strong>Tom</strong> ±12 semitons com ajuste fino em cents.", "<strong>Biblioteca</strong> com busca, artistas (pelo artista do álbum) e pastas.", "Abre MP3, M4A, FLAC, WAV e OGG do celular."]],
+      ["Separar instrumentos", ["Separa <strong>voz, guitarra, baixo, bateria, piano</strong> e outros com inteligência artificial (Demucs).", "Tudo <strong>no próprio celular</strong>, sem internet e sem mandar a música para lugar nenhum.", "<strong>Tire</strong> um instrumento para tocar a parte dele ou ouça <strong>só</strong> ele.", "Também abre faixas separadas no PC, no Moises ou em outro programa."]],
+      ["Exportar para a banda", ["Salva a música do jeito que você deixou: <strong>sem um instrumento</strong>, mais lenta, em outro tom ou só o trecho A–B.", "Arquivo .m4a pronto para mandar no WhatsApp ou <strong>tocar no show</strong>.", "<strong>Faixas para DAW</strong>: cada instrumento num WAV sem perda, alinhado (Reaper, Studio One, Audacity)."]],
       ["Repetir trecho A/B", ["Marque A e B no ponto atual ou <strong>arrastando o dedo na forma de onda</strong>.", "Pausa com contagem antes de repetir e contador de voltas.", "<strong>Acelerar a cada volta</strong>: comece em 60% e chegue a 100%.", "Trechos salvos por música (“Solo 1”, “Riff do refrão”)."]],
       ["Feito para estudar", ["A tela fica acesa enquanto o app está aberto.", "O metrônomo continua tocando junto com o player.", "Sem anúncios interrompendo o estudo."]]
     ],
     privacidade: [
       "<strong>Sem cadastro, sem anúncios e sem internet:</strong> o app não tem permissão de internet.",
       "O som do microfone é analisado na hora, só para o afinador, e <strong>nunca é gravado</strong>.",
+      "A separação dos instrumentos é feita <strong>no próprio celular</strong>: a música não sai do aparelho.",
       "As músicas abertas no player são lidas do próprio celular."
     ],
     permissoes: [
       ["Microfone", "Ouvir o instrumento no afinador"],
-      ["Vibração", "Vibrar no tempo do metrônomo (opcional)"]
+      ["Vibração", "Vibrar no tempo do metrônomo (opcional)"],
+      ["Notificações", "Mostrar o progresso da separação dos instrumentos (opcional)"],
+      ["Serviço em primeiro plano", "Continuar separando com a tela apagada ou em outro app"]
     ],
     instalar: [
       ["Baixe o APK", "Pelo celular, toque em “Baixar APK” nesta página."],
@@ -129,7 +135,9 @@ const APPS = [
       ["O afinador do Begood Studio serve para violão, guitarra e baixo?", "Serve. Tem afinações prontas para violão, guitarra (6 e 7 cordas), baixo de 4 e 5 cordas, cavaquinho, ukulele, violino, bandolim, viola e violoncelo, além do modo cromático para qualquer instrumento."],
       ["Dá para deixar a música mais lenta sem mudar o tom?", "Dá. O player muda a velocidade de 25% a 200% mantendo o tom, e também muda o tom sem mexer na velocidade."],
       ["Como repetir só um trecho da música?", "No Player, marque o ponto A e o ponto B (ou arraste o dedo na forma de onda) e ligue Repetir. Dá para acelerar um pouco a cada volta."],
-      ["Precisa de internet?", "Não. O Begood Studio não tem permissão de internet: tudo funciona no celular, inclusive no ensaio sem sinal."]
+      ["Dá para tirar a voz ou a guitarra de uma música?", "Dá. Abra a música no Player e toque em Separar os instrumentos. O app separa voz, guitarra, baixo, bateria, piano e outros no próprio celular, sem internet. Leva alguns minutos por música; depois é só tocar em Tirar no instrumento que você quer tocar."],
+      ["Como mandar a música sem a guitarra para a banda?", "Depois de tirar o instrumento (e, se quiser, mudar a velocidade, o tom ou marcar um trecho), toque em Exportar áudio. O arquivo fica na pasta Música › Begood Studio e pode ser compartilhado na hora. Também dá para exportar cada instrumento em WAV para usar numa DAW."],
+      ["Precisa de internet?", "Não. O Begood Studio não tem permissão de internet: tudo funciona no celular, inclusive a separação dos instrumentos e o ensaio sem sinal."]
     ]
   }
 ];
@@ -322,7 +330,7 @@ function home() {
     author: { "@type": "Person", name: AUTOR }
   };
 
-  return `${cabeca({ titulo: "Begood Music: player de música, afinador e metrônomo grátis para Android", descricao: "Apps Android gratuitos, sem anúncios e de código aberto para quem ama música: Begood Music Player (player offline com letras e equalizador) e Begood Studio (afinador, metrônomo e player de estudo).", pref, canonico: "/", imagem: "og.png", dados: [site, dadosFaq(FAQ_GERAL)] })}
+  return `${cabeca({ titulo: "Begood Music: player de música, afinador e metrônomo grátis para Android", descricao: "Apps Android gratuitos, sem anúncios e de código aberto para quem ama música: Begood Music Player (player offline com letras e equalizador) e Begood Studio (afinador, metrônomo, player de estudo e separador de instrumentos).", pref, canonico: "/", imagem: "og.png", dados: [site, dadosFaq(FAQ_GERAL)] })}
 <body class="app-bmp">
 ${topo(pref, "apps")}
 <main id="conteudo">
